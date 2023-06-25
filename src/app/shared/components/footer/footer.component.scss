@@ -1,1 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+.footer {
+  padding: 90px 350px 0px 350px;
+  background-color: #f5f5f5;
+
+  @media (max-width: 1700px) {
+    padding: 90px 200px 0px 200px;
+  }
+
+  @media (max-width: 1575px) {
+    padding: 90px 175px 0px 175px;
+  }
+
+  @media (max-width: 1450px) {
+    padding: 90px 100px 0px 100px;
+  }
+
+  @media (max-width: 1380px) {
+    padding: 90px 90px 0px 90px;
+  }
+
+  @media (max-width: 1350px) {
+    padding: 90px 75px 0px 75px;
+  }
+
+  @media (max-width: 1250px) {
+    padding: 90px 30px 0px 30px;
+  }
+
+  @media (max-width: 1050px) {
+    padding: 90px 40px 0px 40px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 90px 90px 0px 90px;
+  }
+
+  @media (max-width: 800px) {
+    padding: 90px 30px 0px 30px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 90px 75px 0px 75px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 90px 20px 0px 20px;
+  }
+
+  @media (max-width: 550px) {
+    padding: 90px 10px 0px 10px;
+  }
+
+  .container {
+    .foo-cols {
+      height: 350px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+
+      @media (max-width: 1200px) {
+        height: 600px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 550px) {
+        height: 1150px;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .foo-col {
+        @media (max-width: 1200px) {
+          padding-right: 0px 25px 0px 0px;
+        }
+
+        img {
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+          margin-bottom: 10px;
+          cursor: pointer;
+        }
+
+        .social-icons {
+          display: flex;
+          gap: 10px;
+          color: #70c332;
+          margin-top: 35px;
+
+          div {
+            background-color: white;
+            border-radius: 50%;
+            padding: 12px 12px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+              0 5px 20px 0 rgba(0, 0, 0, 0.1);
+          }
+
+          div:hover {
+            color: white;
+            background-color: #70c332;
+            transition: background-color 0.5s ease-in;
+            cursor: pointer;
+          }
+        }
+
+        h1 {
+          color: #55555a;
+          margin-bottom: 20px;
+          font-weight: 500;
+          font-size: 25px;
+        }
+
+        p {
+          color: #55555a;
+          margin: 8px 0px;
+          font-size: 17px;
+          line-height: 1.5;
+        }
+
+        .link:hover {
+          color: #70c332;
+          cursor: pointer;
+          text-decoration: underline;
+          transition: color 0.5s ease-in;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          mat-icon {
+            color: #70c332;
+            transform: scale(1.35);
+            font-weight: 900;
+            overflow: visible;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: #70c332;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0px;
+    border-radius: 8px 8px 0px 0px;
+
+    span:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
