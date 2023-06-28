@@ -29,12 +29,12 @@
       .bi {
         font-size: 18px;
         color: green;
+        transition: all 0.3s linear;
       }
 
       &:hover {
         background-color: green;
         box-shadow: 5px 15px 35px #0000001a;
-        transition: all 0.3s linear;
 
         .bi {
           color: #fff;
