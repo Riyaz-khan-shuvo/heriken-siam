@@ -1,6 +1,6 @@
 <div class="top-container">
   <div class="header">
-    <img class="logo" [routerLink]="['/home']" src="assets/icons/logo.png">
+    <img class="logo" [routerLink]="['']" src="assets/icons/logo.png">
     <div class="search-box">
       <input placeholder="Search products in Heriken...">
       <mat-icon>search</mat-icon>
@@ -17,7 +17,7 @@
   <!-- Responsive Header -->
   <div class="res-header">
     <mat-icon>account_circle</mat-icon>
-    <img class="logo" [routerLink]="['/home']" src="assets/icons/logo.png">
+    <img class="logo" [routerLink]="['']" src="assets/icons/logo.png">
     <div class="res-search" *ngIf="!showBox" (click)="toggleSearchBox()">
       <mat-icon>search</mat-icon>
     </div>

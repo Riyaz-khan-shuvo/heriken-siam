@@ -3,13 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
-import { AboutComponent } from './about/about.component';
+import { BottomNavModule } from '../shared/components/bottom-nav/bottom-nav.module';
 
 @NgModule({
   declarations: [PagesComponent],
-  imports: [CommonModule, PagesRoutingModule, HeaderModule, FooterModule],
+  imports: [
+    CommonModule,
+    PagesRoutingModule,
+    HeaderModule,
+    FooterModule,
+    BottomNavModule,
+  ],
 })
 export class PagesModule {}

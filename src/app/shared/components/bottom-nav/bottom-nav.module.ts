@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from './footer.component';
 import { MatIconModule } from '@angular/material/icon';
+import { BottomNavComponent } from './bottom-nav.component';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [BottomNavComponent],
   imports: [CommonModule, MatIconModule, RouterModule],
-  exports: [FooterComponent],
+  exports: [BottomNavComponent],
 })
-export class FooterModule {}
+export class BottomNavModule {}
