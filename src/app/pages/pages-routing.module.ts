@@ -13,9 +13,11 @@ const routes: Routes = [
           import('./home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'about',
+        path: 'details',
         loadChildren: () =>
-          import('./about/about.module').then((m) => m.AboutModule),
+          import('./product-details/product-details.module').then(
+            (m) => m.ProductDetailsModule
+          ),
       },
     ],
   },
@@ -23,6 +25,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PagesRoutingModule { }
+export class PagesRoutingModule {}

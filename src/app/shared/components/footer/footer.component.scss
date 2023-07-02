@@ -5,19 +5,19 @@
 
 //Footer
 .footer {
-  padding: 90px 75px 0px 75px;
-  background-color: #f5f6f7;
+  padding: 90px 80px 0px 80px;
+  background-color: white;
 
-  @media only screen and (max-width: 1280px) {
-    padding: 90px 40px 0px 40px;
+  @media only screen and (max-width: 991px) {
+    padding: 90px 50px 0px 50px;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 768px) {
     padding: 90px 30px 0px 30px;
   }
 
-  @media only screen and (max-width: 600px) {
-    padding: 90px 20px 0px 20px;
+  @media only screen and (max-width: 550px) {
+    padding: 90px 10px 0px 10px;
   }
 
   .container {
@@ -32,7 +32,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 550px) {
         height: 1150px;
         grid-template-columns: repeat(1, 1fr);
       }
@@ -60,13 +60,13 @@
             border-radius: 50%;
             padding: 12px 12px;
             box-shadow: 0 15px 35px #0000001a;
-          }
 
-          div:hover {
-            color: white;
-            background-color: #70c332;
-            transition: background-color 0.5s ease-in;
-            cursor: pointer;
+            &:hover {
+              color: white;
+              background-color: #70c332;
+              transition: background-color 0.5s ease-in;
+              cursor: pointer;
+            }
           }
         }
 
@@ -124,45 +124,45 @@
 }
 
 // Responsive Footer
-.res-footer {
-  height: 60px;
-  background-color: white;
-  box-shadow: 0 -5px 15px #0000001a;
-  justify-content: space-between;
-  align-items: center;
-  display: none;
-  border-radius: 10px 10px 0px 0px;
-  position: sticky;
-  bottom: 0;
+// .res-footer {
+//   height: 60px;
+//   background-color: white;
+//   box-shadow: 0 -5px 15px #0000001a;
+//   justify-content: space-between;
+//   align-items: center;
+//   display: none;
+//   border-radius: 10px 10px 0px 0px;
+//   position: sticky;
+//   bottom: 0;
 
-  @media only screen and (max-width: 992px) {
-    display: flex;
-    padding: 0px 30px;
-  }
+//   @media only screen and (max-width: 991px) {
+//     display: flex;
+//     padding: 0px 50px;
+//   }
 
-  @media only screen and (max-width: 600px) {
-    display: flex;
-    padding: 0px 20px;
-  }
+//   @media only screen and (max-width: 550px) {
+//     display: flex;
+//     padding: 0px 10px;
+//   }
 
-  div {
-    color: #55555a;
-    text-align: center;
+//   div {
+//     color: #55555a;
+//     text-align: center;
 
-    p {
-      margin-bottom: 0px;
-    }
-  }
+//     p {
+//       margin-bottom: 0px;
+//     }
+//   }
 
-  mat-icon {
-    color: #55555a;
-  }
+//   mat-icon {
+//     color: #55555a;
 
-  mat-icon:hover {
-    color: #70c332;
-    transition: color 0.3s ease-in;
-  }
-}
+//     &:hover {
+//       color: #70c332;
+//       transition: color 0.3s ease-in;
+//     }
+//   }
+// }
 
 // Scroll Button
 .scroll {
