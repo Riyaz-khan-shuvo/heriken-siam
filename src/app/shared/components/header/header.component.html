@@ -20,7 +20,17 @@
       </div>
     </div>
   </div>
-  <hr class="division">
+   <!-- Responsive Header -->
+   <div class="res-header">
+    <mat-icon>account_circle</mat-icon>
+    <img class="logo" [routerLink]="['']" src="assets/icons/logo.png">
+    <div class="res-search" *ngIf="!showBox" (click)="toggleSearchBox()">
+      <mat-icon>search</mat-icon>
+    </div>
+    <div class="cross" *ngIf="showBox" (click)="toggleSearchBox()">
+      <mat-icon>close</mat-icon>
+    </div>
+  </div>
   <!-- Navbar Starts -->
   <div class="navbar">
     <hr class="division">
