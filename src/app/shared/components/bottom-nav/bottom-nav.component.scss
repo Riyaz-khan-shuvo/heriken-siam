@@ -1,0 +1,40 @@
+// Bottom Navbar
+.bottom-nav {
+  height: 60px;
+  background-color: white;
+  box-shadow: 0 -5px 15px #0000001a;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  border-radius: 10px 10px 0px 0px;
+  position: sticky;
+  bottom: 0;
+
+  @media only screen and (max-width: 991px) {
+    display: flex;
+    padding: 0px 50px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    display: flex;
+    padding: 0px 10px;
+  }
+
+  div {
+    color: #55555a;
+    text-align: center;
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+
+  mat-icon {
+    color: #55555a;
+
+    &:hover {
+      color: #70c332;
+      transition: color 0.3s ease-in;
+    }
+  }
+}
