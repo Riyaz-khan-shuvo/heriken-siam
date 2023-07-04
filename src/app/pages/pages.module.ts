@@ -5,18 +5,16 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
-import { AboutComponent } from './about/about.component';
-
+import { BottomNavModule } from '../shared/components/bottom-nav/bottom-nav.module';
 
 @NgModule({
-  declarations: [
-    PagesComponent,
-  ],
+  declarations: [PagesComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
     HeaderModule,
-    FooterModule
-  ]
+    FooterModule,
+    BottomNavModule,
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}
