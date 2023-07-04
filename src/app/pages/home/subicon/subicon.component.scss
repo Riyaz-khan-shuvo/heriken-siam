@@ -1,0 +1,61 @@
+.sub-icons {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 35px;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 1182px) {
+    width: 80vw;
+  }
+
+  .icon-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-color: #fff;
+      border: double 3px green;
+
+      .bi {
+        font-size: 18px;
+        color: green;
+        transition: all 0.3s linear;
+      }
+
+      &:hover {
+        background-color: green;
+        box-shadow: 5px 15px 35px #0000001a;
+
+        .bi {
+          color: #fff;
+        }
+      }
+    }
+
+    .text-container {
+      line-height: 3pt;
+
+      h3 {
+        color: #39404a;
+        font-weight: 500;
+        font-size: 17px;
+      }
+
+      p {
+        color: #555;
+        font-weight: 400;
+        font-size: 15px;
+      }
+    }
+  }
+}

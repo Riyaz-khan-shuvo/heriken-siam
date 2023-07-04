@@ -1,0 +1,91 @@
+<div>
+  <div class="card-list">
+    <div class="card" *ngFor="let product of products">
+      <div class="product-image">
+        <img src="{{ product.imgLink }}" alt="product-image" />
+      </div>
+
+      <div class="content">
+        <div class="icons">
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <span> (0) </span>
+        </div>
+        <h3 class="title">
+          {{ product.title }}
+        </h3>
+        <div class="price">
+          <h3 class="old-price">৳{{ product.oldPrice }}</h3>
+          <h3 class="new-price">৳{{ product.newPrice }}</h3>
+        </div>
+
+        <h2 class="discount">Discount:৳{{ product.discount }}</h2>
+
+        <button class="add">
+          <i class="bi bi-basket2-fill"></i>
+          Add
+        </button>
+      </div>
+    </div>
+
+    <!-- <div class="card">
+      <div class="product-image">
+        <img src="" alt="" />
+      </div>
+
+      <div class="content">
+        <div class="icons">
+          <span> (0) </span>
+        </div>
+        <h3>Remax Tws-18 Smart Touch Binarul Stereo Wirless...</h3>
+        <div class="price">
+          <h3 class="old-price">৳1400</h3>
+          <h3 class="new-price">৳999</h3>
+        </div>
+
+        <h2 class="discount">Discount:৳401</h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-image">
+        <img src="" alt="" />
+      </div>
+
+      <div class="content">
+        <div class="icons">
+          <span> (0) </span>
+        </div>
+        <h3>Remax Tws-18 Smart Touch Binarul Stereo Wirless...</h3>
+        <div class="price">
+          <h3 class="old-price">৳1400</h3>
+          <h3 class="new-price">৳999</h3>
+        </div>
+
+        <h2 class="discount">Discount:৳401</h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-image">
+        <img src="" alt="" />
+      </div>
+
+      <div class="content">
+        <div class="icons">
+          <span> (0) </span>
+        </div>
+        <h3>Remax Tws-18 Smart Touch Binarul Stereo Wirless...</h3>
+        <div class="price">
+          <h3 class="old-price">৳1400</h3>
+          <h3 class="new-price">৳999</h3>
+        </div>
+
+        <h2 class="discount">Discount:৳401</h2>
+      </div>
+    </div> -->
+  </div>
+</div>

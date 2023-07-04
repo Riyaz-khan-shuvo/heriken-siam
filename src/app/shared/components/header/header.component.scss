@@ -73,6 +73,31 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+
+        .icon {
+          position: absolute;
+          border: #ffffff 1px solid;
+          background-color: #6ebf31;
+          top: 10px;
+
+          span {
+            color: #ffffff;
+          }
+        }
+
+        .fav-count {
+          right: 9.5rem;
+          position: absolute;
+          height: 20px;
+          width: 20px;
+        }
+
+        .comp-count {
+          right: 5.5rem;
+          position: absolute;
+          height: 20px;
+          width: 20px;
+        }
       }
     }
   }

@@ -56,11 +56,24 @@
           margin-top: 35px;
 
           div {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: white;
             border-radius: 50%;
             padding: 12px 12px;
             box-shadow: 0 15px 35px #0000001a;
 
+            &:hover {
+              color: white;
+              background-color: #70c332;
+              transition: background-color 0.5s ease-in;
+              cursor: pointer;
+            }
+          }
+        }
             &:hover {
               color: white;
               background-color: #70c332;
@@ -88,7 +101,7 @@
           color: #70c332;
           cursor: pointer;
           text-decoration: underline;
-          transition: color 0.5s ease-in;
+          transition: all 0.3s linear;
         }
 
         div {
