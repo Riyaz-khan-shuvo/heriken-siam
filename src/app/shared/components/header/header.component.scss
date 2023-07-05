@@ -6,57 +6,8 @@
 //Header
 .top-container {
   position: relative;
-  padding: 20px 350px;
   background-color: white;
   z-index: 999;
-
-  @media (max-width: 1700px) {
-    padding: 20px 200px;
-  }
-
-  @media (max-width: 1575px) {
-    padding: 20px 175px;
-  }
-
-  @media (max-width: 1450px) {
-    padding: 20px 100px;
-  }
-
-  @media (max-width: 1380px) {
-    padding: 20px 90px;
-  }
-
-  @media (max-width: 1350px) {
-    padding: 20px 75px;
-  }
-
-  @media (max-width: 1250px) {
-    padding: 20px 30px;
-  }
-
-  @media (max-width: 1050px) {
-    padding: 20px 40px;
-  }
-
-  @media (max-width: 900px) {
-    padding: 20px 90px;
-  }
-
-  @media (max-width: 800px) {
-    padding: 20px 30px;
-  }
-
-  @media (max-width: 700px) {
-    padding: 20px 75px;
-  }
-
-  @media (max-width: 600px) {
-    padding: 20px 20px;
-  }
-
-  @media (max-width: 550px) {
-    padding: 20px 10px;
-  }
 
   .header {
     width: 100%;
