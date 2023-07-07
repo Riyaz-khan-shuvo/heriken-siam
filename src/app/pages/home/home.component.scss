@@ -14,7 +14,7 @@
 .header {
   margin-bottom: 5rem;
   .background {
-    height: 30rem;
+    height: 30.9rem;
     background-image: url("../../../assets/images/poster.png");
     background-position: center;
     background-size: cover;
@@ -24,7 +24,7 @@
     transform-origin: 100%;
 
     @media (max-width: 699px) {
-      height: 15rem !important;
+      height: 20rem !important;
       transform: skewY(0deg);
     }
   }

@@ -24,16 +24,16 @@
       width: 3rem;
       border-radius: 50%;
       background-color: #fff;
-      border: double 3px green;
+      border: double 3px #94a9a0;
 
       .bi {
         font-size: 18px;
-        color: green;
+        color: #94a9a0;
         transition: all 0.3s linear;
       }
 
       &:hover {
-        background-color: green;
+        background-color: #94a9a0;
         box-shadow: 5px 15px 35px #0000001a;
 
         .bi {
