@@ -37,18 +37,19 @@
             </div>
         </div>
     </div>
+
     <div class="toggler">
         <a>DESCRIPTIONS</a>
         <div class="line"></div>
         <a>CUSTOMER REVIEW (0)</a>
     </div>
-    <!-- <div class="detail-review"></div> -->
+
     <div class="related">
         <p class="heading">Related items</p>
         <div class="cards">
-            <div class="card">
+            <div class="card" *ngFor="let product of related">
                 <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
+                    <img src={{product.imgLink}}>
                 </div>
                 <div class="rating">
                     <mat-icon>star_border</mat-icon>
@@ -58,169 +59,7 @@
                     <mat-icon>star_border</mat-icon>
                     <p>(0)</p>
                 </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
-                <p class="price">৳1,631</p>
-                <div class="add-button">
-                    <button><mat-icon>shopping_basket</mat-icon>ADD</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/images/tws1-a4010.webp">
-                </div>
-                <div class="rating">
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <mat-icon>star_border</mat-icon>
-                    <p>(0)</p>
-                </div>
-                <p class="card-title">Best Selling Bluetooth...</p>
+                <p class="card-title">{{product.title}}</p>
                 <p class="price">৳1,631</p>
                 <div class="add-button">
                     <button><mat-icon>shopping_basket</mat-icon>ADD</button>
@@ -230,24 +69,3 @@
         <div class="more-button">
             <button><mat-icon>remove_red_eye</mat-icon>VIEW ALL RELATED ITEMS</button>
         </div>
-    </div>
-</div>
-<!-- Sticky Section -->
-<!-- <div class="res-footer">
-    <div>
-        <mat-icon>home</mat-icon>
-        <p>Home</p>
-    </div>
-    <div>
-        <mat-icon>list</mat-icon>
-        <p>Categories</p>
-    </div>
-    <div>
-        <mat-icon>shopping_basket</mat-icon>
-        <p>Cart</p>
-    </div>
-    <div>
-        <mat-icon>favorite</mat-icon>
-        <p>Wishlist</p>
-    </div>
-</div> -->

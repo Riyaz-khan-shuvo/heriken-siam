@@ -2,3 +2,86 @@
   margin: 0;
   padding: 0;
 }
+
+.cart-drawer {
+  background-color: white;
+  width: 400px;
+  position: fixed;
+
+  .card-top {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 18px 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+
+    .close-drawer {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #55555a;
+
+      &:hover {
+        color: white;
+        background-color: #db230c;
+        transition: all 0.3s linear;
+      }
+
+      mat-icon {
+        font-weight: 900;
+      }
+    }
+
+    .item-sec {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #70c332;
+      font-weight: 500;
+      font-size: 17px;
+    }
+  }
+
+  .card-main {
+    height: 100%;
+    max-height: calc(100vh - 165px);
+  }
+
+  .card-bottom {
+    padding: 15px 20px;
+    box-shadow: 0 -3px 7px #00000014;
+
+    a {
+      display: flex;
+      background-color: #70c332;
+      padding: 10px 0;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #55555a;
+        transition: 0.3s linear;
+      }
+
+      p {
+        width: 100%;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-align: center;
+      }
+
+      span {
+        padding: 0 25px;
+        border-left: 1px solid white;
+        font-size: 16px;
+      }
+    }
+  }
+}

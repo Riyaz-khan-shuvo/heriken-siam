@@ -1,10 +1,33 @@
-<div class="header-area">
-  <app-header></app-header>
-</div>
-<div class="all-page-render-area">
-  <router-outlet></router-outlet>
-</div>
-<div class="footer-area">
-  <app-footer></app-footer>
-</div>
-<bottom-nav></bottom-nav>
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer class="cart-drawer" position="end" #drawer>
+    <div class="card-top">
+      <div class="close-drawer">
+        <mat-icon (click)="drawer.toggle()">close</mat-icon>
+      </div>
+      <div class="item-sec">
+        <mat-icon>shopping_basket</mat-icon>
+        <p>Total Items (00)</p>
+      </div>
+    </div>
+    <div class="card-main"></div>
+    <div class="card-bottom">
+      <a>
+        <p>Proceed to Checkout</p>
+        <span>৳0</span>
+      </a>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="header-area">
+      <app-header></app-header>
+    </div>
+    <div class="all-page-render-area">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="footer-area">
+      <app-footer></app-footer>
+    </div>
+    <bottom-nav></bottom-nav>
+    <cart-box (click)="drawer.toggle()"></cart-box>
+  </mat-drawer-content>
+</mat-drawer-container>
