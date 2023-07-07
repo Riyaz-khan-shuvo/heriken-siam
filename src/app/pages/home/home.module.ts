@@ -5,10 +5,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SubiconComponent } from './subicon/subicon.component';
 import { ProductsComponent } from './products/products.component';
-import { MatIconModule } from '@angular/material/icon';
+import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 
 @NgModule({
   declarations: [HomeComponent, SubiconComponent, ProductsComponent],
-  imports: [CommonModule, HomeRoutingModule, MatIconModule],
+  imports: [CommonModule, HomeRoutingModule, MaterialModule],
 })
 export class HomeModule {}
