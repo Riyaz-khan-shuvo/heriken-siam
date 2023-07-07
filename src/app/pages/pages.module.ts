@@ -7,8 +7,7 @@ import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { BottomNavModule } from '../shared/components/bottom-nav/bottom-nav.module';
 import { CartBoxModule } from '../shared/components/cart-box/cart-box.module';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MaterialModule } from '../shared/modules/material/material.module';
 
 @NgModule({
   declarations: [PagesComponent],
@@ -19,8 +18,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     FooterModule,
     BottomNavModule,
     CartBoxModule,
-    MatIconModule,
-    MatSidenavModule,
+    MaterialModule,
   ],
 })
 export class PagesModule {}
