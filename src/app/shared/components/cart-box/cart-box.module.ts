@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from './footer.component';
+import { CartBoxComponent } from './cart-box.component';
 import { MaterialModule } from '../../modules/material/material.module';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [CartBoxComponent],
   imports: [CommonModule, MaterialModule, RouterModule],
-  exports: [FooterComponent],
+  exports: [CartBoxComponent],
 })
-export class FooterModule {}
+export class CartBoxModule {}

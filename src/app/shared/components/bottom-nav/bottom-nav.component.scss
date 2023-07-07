@@ -23,18 +23,15 @@
   div {
     color: #55555a;
     text-align: center;
-
-    p {
-      margin-bottom: 0px;
-    }
-  }
-
-  mat-icon {
-    color: #55555a;
+    cursor: pointer;
 
     &:hover {
       color: #70c332;
-      transition: color 0.3s ease-in;
+      transition: 0.3s ease-in;
+    }
+
+    p {
+      margin-bottom: 0px;
     }
   }
 }
