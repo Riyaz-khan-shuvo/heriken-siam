@@ -7,8 +7,10 @@
   align-items: center;
   display: none;
   border-radius: 10px 10px 0px 0px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
 
   @media only screen and (max-width: 991px) {
     display: flex;
@@ -26,7 +28,7 @@
     cursor: pointer;
 
     &:hover {
-      color: #70c332;
+      color: #94a9a0;
       transition: 0.3s ease-in;
     }
 

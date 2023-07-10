@@ -1,21 +1,17 @@
 .container {
   display: grid;
-  padding: 50px 350px;
+  padding: 50px 80px;
   background-color: #f5f6f7;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: 1182px) {
-    padding: 50px 50px 50px 50px;
-  }
-
   @media only screen and (max-width: 991px) {
-    padding: 125px 100px 50px 100px;
+    padding: 125px 50px 50px 50px;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 125px 75px 50px 75px;
+    padding: 125px 30px 50px 30px;
   }
 
   @media only screen and (max-width: 550px) {
@@ -97,7 +93,7 @@
       background-color: white;
 
       @media only screen and (max-width: 1182px) {
-        height: 475px;
+        height: 500px;
       }
 
       @media only screen and (max-width: 991px) {
@@ -140,12 +136,12 @@
           }
 
           .current {
-            color: #70c332;
+            color: #94a9a0;
           }
         }
 
         .discount {
-          color: #70c332;
+          color: #94a9a0;
         }
       }
 
@@ -159,7 +155,7 @@
         }
 
         button {
-          background-color: #70c332;
+          background-color: #94a9a0;
           color: white;
           padding: 15px 15px;
           border: none;
@@ -196,7 +192,7 @@
           gap: 10px;
 
           &:hover {
-            color: #70c332;
+            color: #94a9a0;
             transition: color 0.3s ease-in;
           }
         }
@@ -220,6 +216,11 @@
       text-decoration: none;
       color: #55555a;
       font-weight: 500;
+
+      &:hover {
+        color: #94a9a0;
+        transition: all 0.3s linear;
+      }
     }
 
     .line {
@@ -265,14 +266,16 @@
         background-color: white;
         border-radius: 10px;
         padding: 20px;
+        cursor: pointer;
+        transition: border-color 0.3s linear;
+        border: 1px solid transparent;
 
         @media only screen and (max-width: 550px) {
           padding: 15px;
         }
 
         &:hover {
-          border: 1px solid #70c332;
-          transition: background-color 0.3s ease-in;
+          border-color: #94a9a0;
         }
 
         .card-img {
@@ -305,13 +308,13 @@
           cursor: pointer;
 
           &:hover {
-            color: #70c332;
+            color: #94a9a0;
             transition: 0.3s ease-in;
           }
         }
 
         .price {
-          color: #70c332;
+          color: #94a9a0;
           text-align: center;
           font-size: 17px;
           font-weight: 600;
@@ -333,9 +336,10 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            cursor: pointer;
 
             &:hover {
-              background-color: #70c332;
+              background-color: #94a9a0;
               color: white;
               transition: background-color 0.5s ease-in;
             }
@@ -351,7 +355,7 @@
       align-items: center;
 
       button {
-        background-color: #70c332;
+        background-color: #94a9a0;
         border: none;
         color: white;
         border-radius: 8px;
@@ -363,6 +367,14 @@
         align-items: center;
         gap: 10px;
         cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.5s linear;
+
+        &:hover {
+          background-color: white;
+          color: #94a9a0;
+          border-color: #94a9a0;
+        }
       }
     }
   }
