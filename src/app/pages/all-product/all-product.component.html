@@ -1,0 +1,92 @@
+<div class="allproducts">
+  <div class="sidebar">
+    <div class="filterd box">
+      <h3 class="title">Filterd Search</h3>
+      <div class="range">
+        <input type="text" placeholder="Min-00" />
+        <input type="text" placeholder="Max-00" />
+      </div>
+
+      <div class="search">
+        <button><mat-icon>search</mat-icon> Search</button>
+      </div>
+    </div>
+
+    <div class="categoeryfiled box">
+      <h3 class="title">FILTER BY category</h3>
+      <div class="categoryes">
+        <input type="checkbox" class="check" />
+        <div class="content">
+          <p class="cate-title">Gadgets</p>
+          <p class="quantity">(17)</p>
+        </div>
+      </div>
+
+      <div class="categoryes">
+        <input type="checkbox" class="check" />
+        <div class="content">
+          <p class="cate-title">Gadgets</p>
+          <p class="quantity">(17)</p>
+        </div>
+      </div>
+      <div class="categoryes">
+        <input type="checkbox" class="check" />
+        <div class="content">
+          <p class="cate-title">Gadgets</p>
+          <p class="quantity">(17)</p>
+        </div>
+      </div>
+
+      <div class="categoryes">
+        <input type="checkbox" class="check" />
+        <div class="content">
+          <p class="cate-title">Gadgets</p>
+          <p class="quantity">(17)</p>
+        </div>
+      </div>
+
+      <div class="categoryes">
+        <input type="checkbox" class="check" />
+        <div class="content">
+          <p class="cate-title">Gadgets</p>
+          <p class="quantity">(17)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="products">
+    <div class="card" *ngFor="let product of data">
+      <div class="product-image">
+        <img src="{{ product.imgLink }}" alt="product-image" />
+      </div>
+
+      <div class="content">
+        <div class="icons">
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          <span> (0) </span>
+        </div>
+        <h3 class="title">
+          {{ product.title }}
+        </h3>
+        <div class="price">
+          <h3 class="old-price">৳{{ product.oldPrice }}</h3>
+          <h3 class="new-price">৳{{ product.newPrice }}</h3>
+        </div>
+
+        <h2 class="discount">Discount:৳{{ product.discount }}</h2>
+
+        <button class="add">
+          <i class="bi bi-basket2-fill"></i>
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="more-button">
+    <button><mat-icon>remove_red_eye</mat-icon>VIEW ALL DEALS</button>
+  </div>
+</div>
