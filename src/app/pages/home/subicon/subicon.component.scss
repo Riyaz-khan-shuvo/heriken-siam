@@ -1,14 +1,13 @@
 .sub-icons {
-  width: 80vw;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 35px;
-  margin-left: 4rem;
-  margin-bottom: 4rem;
+  justify-content: space-between;
+  margin: 0 80px 4rem 80px;
 
-  @media (max-width: 1182px) {
-    width: 80vw;
+  @media (max-width: 550px) {
+    margin: 0 60px 4rem 60px;
   }
 
   .icon-container {
