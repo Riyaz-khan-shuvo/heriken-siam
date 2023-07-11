@@ -1,0 +1,101 @@
+<div class="allproducts">
+  <div class="product-filter">
+    <div class="filter-range">
+      <h3 class="filter-title">Filter by Price</h3>
+      <div class="range">
+        <input type="text" placeholder="Min-00" />
+        <input type="text" placeholder="Max-5k" />
+      </div>
+
+      <div class="filter-btn">
+        <button><mat-icon>search</mat-icon> Search</button>
+      </div>
+    </div>
+
+    <div class="filter-category filter-range">
+      <h3 class="filter-title">Filter By Category</h3>
+
+      <div class="categories">
+        <label>
+          <input type="checkbox" class="check" />
+          <span>Groceries</span>
+        </label>
+        <p class="category-quantity">(12)</p>
+      </div>
+
+      <div class="categories">
+        <label>
+          <input type="checkbox" class="check" />
+          <span>Kids Toys</span>
+        </label>
+        <p class="category-quantity">(79)</p>
+      </div>
+
+      <div class="categories">
+        <label>
+          <input type="checkbox" class="check" />
+          <span>Leather</span>
+        </label>
+        <p class="category-quantity">(29)</p>
+      </div>
+
+      <div class="categories">
+        <label>
+          <input type="checkbox" class="check" />
+          <span>Gadgets</span>
+        </label>
+        <p class="category-quantity">(226)</p>
+      </div>
+
+      <div class="categories">
+        <label>
+          <input type="checkbox" class="check" />
+          <span>Women's Clothes</span>
+        </label>
+        <p class="category-quantity">(258)</p>
+      </div>
+
+      <div class="filter-btn">
+        <button><mat-icon>delete</mat-icon> Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product">
+    <div class="card-list">
+      <div class="card" *ngFor="let product of products">
+        <div class="product-image">
+          <img src="{{ product.imgLink }}" alt="product-image" />
+        </div>
+
+        <div class="content">
+          <div class="icons">
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <span> (0) </span>
+          </div>
+          <h3 class="title">
+            {{ product.title }}
+          </h3>
+          <div class="price">
+            <h3 class="old-price">৳{{ product.oldPrice }}</h3>
+            <h3 class="new-price">৳{{ product.newPrice }}</h3>
+          </div>
+
+          <h2 class="discount">Discount:৳{{ product.discount }}</h2>
+
+          <button class="add">
+            <i class="bi bi-basket2-fill"></i>
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="more-button">
+      <button><mat-icon>remove_red_eye</mat-icon>VIEW ALL DEALS</button>
+    </div>
+  </div>
+</div>
