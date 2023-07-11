@@ -6,7 +6,7 @@ import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { BottomNavModule } from '../shared/components/bottom-nav/bottom-nav.module';
 import { CartBoxModule } from '../shared/components/cart-box/cart-box.module';
-import { MaterialModule } from '../shared/modules/material/material.module';
+import { MaterialModule } from '../shared/material.module';
 
 @NgModule({
   declarations: [PagesComponent],

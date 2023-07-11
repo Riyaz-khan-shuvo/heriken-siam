@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { RouterLink, RouterModule } from '@angular/router';
-import { MaterialModule } from '../../modules/material/material.module';
+import { MaterialModule } from '../../material.module';
 
 @NgModule({
   declarations: [HeaderComponent],

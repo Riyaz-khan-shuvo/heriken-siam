@@ -5,10 +5,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SubiconComponent } from './subicon/subicon.component';
 import { ProductsComponent } from './products/products.component';
-import { MaterialModule } from 'src/app/shared/modules/material/material.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { MaterialModule } from 'src/app/shared/material.module';
 
 @NgModule({
   declarations: [HomeComponent, SubiconComponent, ProductsComponent],
-  imports: [CommonModule, HomeRoutingModule, MaterialModule],
+  imports: [CommonModule, HomeRoutingModule, SharedModule, MaterialModule],
 })
 export class HomeModule {}
