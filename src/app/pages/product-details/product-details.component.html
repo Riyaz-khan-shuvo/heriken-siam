@@ -3,28 +3,28 @@
     <div class="images">
       <div class="prod-img">
         <div class="img-container">
-          <img src="assets/images/tws1-a4010.webp">
+          <img src={{product.imgLink}}>
         </div>
       </div>
-      <div class="other-img">
+      <!-- <div class="other-img">
         <img src="assets/images/tws1-a4010.webp">
         <img src="assets/images/tws1-a4010.webp">
         <img src="assets/images/tws1-a4010.webp">
         <img src="assets/images/tws1-a4010.webp">
-      </div>
+      </div> -->
     </div>
     <div class="main-info">
-      <p class="title">Remax Tws-18 Smart Touch Binaural Stereo Wireless Bluetooth Earbuds</p>
+      <p class="title">{{product.title}}</p>
       <div class="brand-code">
-        <p>Product ID: 801976</p>
+        <p>Product ID: {{product.id}}</p>
         <p>BRAND: Remax</p>
       </div>
       <div class="price">
         <div>
-          <p class="previous">৳1400</p>
-          <p class="current">৳999</p>
+          <p class="previous">৳{{product.oldPrice}}</p>
+          <p class="current">৳{{product.newPrice}}</p>
         </div>
-        <div class="discount">Discount: ৳401</div>
+        <div class="discount">Discount: ৳{{product.discount}}</div>
       </div>
       <div class="action-buttons">
         <div class="add-buy">
@@ -47,7 +47,7 @@
   <div class="related">
     <p class="heading">Related items</p>
     <div class="cards">
-      <div class="card" *ngFor="let product of related">
+      <div class="card" *ngFor="let product of products">
         <div class="card-img">
           <img src={{product.imgLink}}>
         </div>
