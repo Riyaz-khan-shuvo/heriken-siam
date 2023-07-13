@@ -25,7 +25,9 @@ $aligen: center;
       // grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
     }
-
+.hide-btn{
+  display: none;
+}
     .card {
       width: 100%;
       border: 1px solid transparent;

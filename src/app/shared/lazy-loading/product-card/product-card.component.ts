@@ -8,12 +8,20 @@ import productsList from 'src/app/cong/data';
 })
 export class ProductCardComponent implements OnInit {
   products = productsList;
-  CartProducts: any[] = [];
+  cartProducts: Array<any> = [];
+  data: any;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
 
-    
+
+  }
+  addToCart(productId: any): any {
+    this.data = this.products.find(m => m?.id == productId)
+    this.cartProducts.push(this.data)
+    let unique = [...new Set(this.cartProducts)];
+    const products = JSON.stringify(unique)
+    localStorage.setItem("productsCart", products)
   }
 }

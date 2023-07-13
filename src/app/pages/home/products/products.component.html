@@ -5,26 +5,12 @@
         <img src="{{ product.imgLink }}" alt="product-image" />
       </div>
 
-      <div class="content">
-        <div class="icons">
-          <i class="bi bi-star"></i>
-          <i class="bi bi-star"></i>
-          <i class="bi bi-star"></i>
-          <i class="bi bi-star"></i>
-          <i class="bi bi-star"></i>
-          <span> (0) </span>
-        </div>
-        <h3 class="title">
-          {{ product.title }}
-        </h3>
-        <div class="price">
-          <h3 class="old-price">৳{{ product.oldPrice }}</h3>
-          <h3 class="new-price">৳{{ product.newPrice }}</h3>
+            <h2 class="discount">Discount:৳{{ product.discount }}</h2>
+          </div>
+
         </div>
 
-        <h2 class="discount">Discount:৳{{ product.discount }}</h2>
-
-        <button class="add">
+        <button  (click)="addToCart(product._id)" class="add">
           <i class="bi bi-basket2-fill"></i>
           Add
         </button>
