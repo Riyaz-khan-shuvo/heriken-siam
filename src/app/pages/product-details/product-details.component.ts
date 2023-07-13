@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import productsList from 'src/app/cong/data';
+import productsList from 'src/app/data/data';
 
 @Component({
   selector: 'app-product-details',
@@ -20,7 +20,7 @@ export class ProductDetailsComponent implements OnInit {
       this.productIdFromRoute = params['productId'];
       console.log(this.productIdFromRoute);
       this.product = this.products.find(
-        produc => produc.id == this.productIdFromRoute
+        (produc) => produc.id == this.productIdFromRoute
       );
 
       console.log(this.product);

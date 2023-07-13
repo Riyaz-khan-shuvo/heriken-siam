@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import productsList from 'src/app/cong/data';
+import productsList from 'src/app/data/data';
 
 @Component({
   selector: 'app-product-card',
@@ -12,8 +12,5 @@ export class ProductCardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-
-    
-  }
+  ngOnInit(): void {}
 }

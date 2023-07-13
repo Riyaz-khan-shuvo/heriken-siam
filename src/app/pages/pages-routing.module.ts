@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
+import { PageNotFoundComponent } from '../shared/components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
           import('./all-products/all-products.module').then(
             (m) => m.AllProductsModule
           ),
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent,
       },
     ],
   },
