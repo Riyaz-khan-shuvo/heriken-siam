@@ -10,14 +10,32 @@ import productsList from 'src/app/cong/data';
 export class ProductDetailsComponent implements OnInit {
   products = productsList;
   product: any;
+  productIdFromRoute: any;
+  productId: any;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productId'));
-    this.product = productsList.find(
-      (product) => product.id === productIdFromRoute
-    );
+    this.route.params.subscribe((params) => {
+      this.productIdFromRoute = params['productId'];
+      console.log(this.productIdFromRoute);
+      this.product = this.products.find(
+        produc => produc.id == this.productIdFromRoute
+      );
+
+      console.log(this.product);
+    });
   }
+
+  //   const routeParams = this.route.snapshot.paramMap;
+  //   this.productIdFromRoute = Number(routeParams.get('productId'));
+  //   this.reload();
+  // }
+
+  // reload() {
+  //   this.product = productsList.find(
+  //     (product) => product.id === this.productIdFromRoute
+  //   );
+  //   // window.location.reload();
+  // }
 }

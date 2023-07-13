@@ -8,8 +8,12 @@ import productsList from 'src/app/cong/data';
 })
 export class ProductCardComponent implements OnInit {
   products = productsList;
+  CartProducts: any[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    
+  }
 }
