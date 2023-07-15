@@ -22,7 +22,9 @@
   </div>
   <!-- Responsive Header -->
   <div class="res-header">
-    <mat-icon>account_circle</mat-icon>
+    <div class="account">
+      <mat-icon>account_circle</mat-icon>
+    </div>
     <img class="logo" [routerLink]="['']" src="assets/icons/logo.png" />
     <div class="res-search" *ngIf="!showBox" (click)="toggleSearchBox()">
       <mat-icon>search</mat-icon>
