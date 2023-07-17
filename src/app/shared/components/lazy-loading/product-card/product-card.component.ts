@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import productsList from 'src/app/cong/data';
+import productsList from 'src/app/data/data';
 
 @Component({
   selector: 'app-product-card',
@@ -11,14 +11,13 @@ export class ProductCardComponent implements OnInit {
   cartProducts: Array<any> = [];
   data: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
 
-
   }
   addToCart(productId: any): any {
-    this.data = this.products.find(m => m?.id == productId)
+    this.data = this.products.find(m => m?._id == productId)
     this.cartProducts.push(this.data)
     let unique = [...new Set(this.cartProducts)];
     const products = JSON.stringify(unique)

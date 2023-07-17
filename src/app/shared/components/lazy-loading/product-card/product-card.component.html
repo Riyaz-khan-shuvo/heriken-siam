@@ -41,7 +41,7 @@
   <div class="card-list">
     <div class="card" *ngFor="let product of products">
       <div>
-        <div [routerLink]="['/details',product?.id]">
+        <div [routerLink]="['/details',product?._id]">
           <div class="product-image">
             <img src="{{ product.imgLink }}" alt="product-image" />
           </div>
@@ -67,7 +67,7 @@
 
         </div>
 
-        <button (click)="addToCart(product.id)" class="add">
+        <button (click)="addToCart(product._id)" class="add">
           <i class="bi bi-basket2-fill"></i>
           Add
         </button>

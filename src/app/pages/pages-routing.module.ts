@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
+import { PageNotFoundComponent } from '../shared/components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,22 @@ const routes: Routes = [
         path: 'signup',
         loadChildren: () =>
           import('./signup/signup.module').then((m) => m.SignupModule),
+      },
+      {
+        path: 'allproducts',
+        loadChildren: () =>
+          import('./all-products/all-products.module').then(
+            (m) => m.AllProductsModule
+          ),
+      },
+      {
+        path: 'checkout',
+        loadChildren: () =>
+          import('./checkout/checkout.module').then((m) => m.CheckoutModule),
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent,
       },
     ],
   },

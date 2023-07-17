@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import productsList from 'src/app/cong/data';
+import productsList from 'src/app/data/data';
+
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -17,12 +18,9 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.productIdFromRoute = params['productId'];
-      console.log(this.productIdFromRoute);
       this.product = this.products.find(
-        produc => produc.id == this.productIdFromRoute
+        (prod) => prod._id == this.productIdFromRoute
       );
-
-      console.log(this.product);
     });
   }
 
@@ -36,25 +34,5 @@ export class ProductDetailsComponent implements OnInit {
   //     (product) => product.id === this.productIdFromRoute
   //   );
   //   // window.location.reload();
-  // }
-  // related = productsList;
-  // PId: any;
-  // data: any;
-
-  // constructor(private route: ActivatedRoute) { }
-  // ngOnInit(): void {
-  //   this.route.params.subscribe(params => {
-  //     this.PId = params['id']
-  //     this.data = this.related.find(m => m?._id == this.PId)
-  //     console.log(this.data);
-  //   });
-  // }
-
-  // addToCart() {
-  //   let cartProducts = JSON.parse(localStorage.getItem("productsCart") as any)
-  //   cartProducts.push(this.data)
-  //   let unique = [...new Set(this.data)];
-  //   const products = JSON.stringify(unique)
-  //   localStorage.setItem("productsCart", products)
   // }
 }
