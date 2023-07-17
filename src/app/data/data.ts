@@ -1,6 +1,6 @@
 const productsList = [
   {
-    id: 1,
+    _id: 1,
     title: 'Remax Tws-18 Smart Touch Binarual Stereo Wirless...',
     imgLink: `https://api.heriken.co/api/upload/images/tws1-a4010.webp`,
     oldPrice: 1400,
@@ -8,7 +8,7 @@ const productsList = [
     discount: 401,
   },
   {
-    id: 2,
+    _id: 2,
     title: 'Baseus L 3.5mm ip Male to Female Adapter For iphone',
     imgLink: `https://api.heriken.co/api/upload/images/eng-pl-baseus-ip-male-to-3-5mm-female-adapter-l3-5-white-62111-8-b8cf.jpg`,
     oldPrice: 1600,
@@ -16,7 +16,7 @@ const productsList = [
     discount: 400,
   },
   {
-    id: 3,
+    _id: 3,
     title: 'M26 Plus Smart Watch For Men & Women IP67...',
     imgLink: `https://api.heriken.co/api/upload/images/m26-14ac.jpg`,
     oldPrice: 3099,
@@ -24,7 +24,7 @@ const productsList = [
     discount: 300,
   },
   {
-    id: 4,
+    _id: 4,
     title: 'New A9 Mini Wifi Camera 1080P HD IP Night Version...',
     imgLink: `https://api.heriken.co/api/upload/images/a9-bd72.jpg`,
     oldPrice: 1400,
@@ -32,7 +32,7 @@ const productsList = [
     discount: 401,
   },
   {
-    id: 5,
+    _id: 5,
     title: 'Baseus Armor Motorcycle & Bicycle Phone Holder With...',
     imgLink: `https://api.heriken.co/api/upload/images/phn-8cff.jpg`,
     oldPrice: 1900,
@@ -40,7 +40,7 @@ const productsList = [
     discount: 350,
   },
   {
-    id: 6,
+    _id: 6,
     title: 'Plextone Mowi RX3 Dual Microphone Gaming...',
     imgLink: `https://api.heriken.co/api/upload/images/3f2613e7b812ee4465d0d80769952405-d1108.jpg`,
     oldPrice: 1142,
@@ -48,7 +48,7 @@ const productsList = [
     discount: 343,
   },
   {
-    id: 7,
+    _id: 7,
     title: 'REMAX RB-S11 Wireless Bluetooth 5.0 Earphone...',
     imgLink: `https://api.heriken.co/api/upload/images/111-30103.webp`,
     oldPrice: 200,
@@ -56,7 +56,7 @@ const productsList = [
     discount: 400,
   },
   {
-    id: 8,
+    _id: 8,
     title: 'LDNIO SC2311 20W 3-Port USB Charger Extension...',
     imgLink: `https://api.heriken.co/api/upload/images/e344738ad7f3202307974466925ca8c6-dc61.jpg`,
     oldPrice: 1600,
@@ -64,7 +64,7 @@ const productsList = [
     discount: 350,
   },
   {
-    id: 9,
+    _id: 9,
     title: 'Wavefun Rock Super Bass TWS Earbuds',
     imgLink: `https://api.heriken.co/api/upload/images/wavefun-5d29.jpg`,
     oldPrice: 1856,
@@ -72,7 +72,7 @@ const productsList = [
     discount: 557,
   },
   {
-    id: 10,
+    _id: 10,
     title: 'Samsung USB Charger 5V/2A Charge Travel Adapt...',
     imgLink: `https://api.heriken.co/api/upload/images/sam-f1e5.webp`,
     oldPrice: 1800,

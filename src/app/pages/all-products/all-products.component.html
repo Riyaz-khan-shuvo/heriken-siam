@@ -63,7 +63,7 @@
 
   <div class="product">
     <div class="card-list">
-      <div class="card" *ngFor="let product of products" [routerLink]="['/details', product.id]">
+      <div class="card" *ngFor="let product of products" [routerLink]="['/details', product._id]">
         <div class="product-image">
           <img src="{{ product.imgLink }}" alt="product-image" />
         </div>

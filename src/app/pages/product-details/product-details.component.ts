@@ -19,8 +19,20 @@ export class ProductDetailsComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.productIdFromRoute = params['productId'];
       this.product = this.products.find(
-        (prod) => prod.id == this.productIdFromRoute
+        (prod) => prod._id == this.productIdFromRoute
       );
     });
   }
+
+  //   const routeParams = this.route.snapshot.paramMap;
+  //   this.productIdFromRoute = Number(routeParams.get('productId'));
+  //   this.reload();
+  // }
+
+  // reload() {
+  //   this.product = productsList.find(
+  //     (product) => product.id === this.productIdFromRoute
+  //   );
+  //   // window.location.reload();
+  // }
 }

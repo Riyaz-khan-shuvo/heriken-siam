@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import productsList from 'src/app/data/data';
 
 @Component({
-  selector: 'app-product-card',
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.scss'],
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.scss'],
 })
-export class ProductCardComponent implements OnInit {
-  products = productsList;
-  cartProducts: Array<any> = [];
+
+
+export class ProductsComponent implements OnInit {
   data: any;
+  cartProducts: Array<any> = [];
 
-  constructor() {}
+  constructor() { }
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
-
-  }
   addToCart(productId: any): any {
     this.data = this.products.find(m => m?._id == productId)
     this.cartProducts.push(this.data)
@@ -23,4 +22,5 @@ export class ProductCardComponent implements OnInit {
     const products = JSON.stringify(unique)
     localStorage.setItem("productsCart", products)
   }
+  products = productsList;
 }
