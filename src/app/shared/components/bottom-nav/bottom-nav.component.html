@@ -1,6 +1,5 @@
-<!-- Bottom Navbar -->
 <div class="bottom-nav">
-    <div>
+    <div [routerLink]="['']">
         <mat-icon>home</mat-icon>
         <p>Home</p>
     </div>
@@ -11,9 +10,15 @@
     <div>
         <mat-icon>shopping_basket</mat-icon>
         <p>Cart</p>
+        <div class="cart-count">
+            <span>00</span>
+        </div>
     </div>
     <div>
         <mat-icon>favorite</mat-icon>
         <p>Wishlist</p>
+        <div class="fav-count">
+            <span>00</span>
+        </div>
     </div>
 </div>

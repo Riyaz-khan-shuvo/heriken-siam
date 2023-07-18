@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductCardComponent } from './components/lazy-loading/product-card/product-card.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ScrollButtonComponent } from './components/scroll-button/scroll-button.component';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
 
@@ -17,6 +18,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     HeaderComponent,
     PageNotFoundComponent,
+    ScrollButtonComponent,
   ],
   imports: [CommonModule, RouterModule, MaterialModule],
   exports: [
@@ -26,6 +28,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     HeaderComponent,
     PageNotFoundComponent,
+    ScrollButtonComponent,
   ],
 })
 export class SharedModule {}

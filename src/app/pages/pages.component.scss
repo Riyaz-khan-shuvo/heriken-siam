@@ -8,7 +8,6 @@
 
   .cart-drawer {
     background-color: white;
-    width: 400px;
     position: fixed;
 
     .card-top {
@@ -57,6 +56,83 @@
     .card-main {
       height: 100%;
       max-height: calc(100vh - 165px);
+
+      .cart-items {
+        padding: 15px;
+        border-bottom: 1px solid #e8e8e8;
+        gap: 20px;
+        display: flex;
+
+        img {
+          width: 100px;
+          border-radius: 8px;
+        }
+
+        .prod-text {
+          h4 {
+            color: #39404a;
+            font-weight: 400;
+            font-size: 16px;
+          }
+
+          span {
+            color: #555;
+            font-weight: 400;
+            font-size: 14px;
+          }
+
+          .quantity-total {
+            margin-top: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .quantity {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              button {
+                color: #555;
+                width: 30px;
+                height: 30px;
+                border: none;
+                outline: none;
+                font-weight: 900;
+                border-radius: 5px;
+                background-color: #f5f5f5;
+                cursor: pointer;
+
+                &:hover {
+                  background-color: #94a9a0;
+                  color: white;
+                  transition: all 0.3s linear;
+                }
+              }
+
+              input {
+                color: #94a9a0;
+                font-weight: 500;
+                font-size: 14px;
+                width: 40px;
+                height: 30px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background-color: #f5f5f5;
+                text-align: center;
+              }
+            }
+
+            p {
+              color: #94a9a0;
+              font-weight: 500;
+              font-size: 17px;
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
     }
 
     .card-bottom {

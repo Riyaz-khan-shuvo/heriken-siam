@@ -9,10 +9,26 @@
         <p>Total Items (00)</p>
       </div>
     </div>
-    <div class="card-main"></div>
+    <div class="card-main">
+      <div class="cart-items" *ngFor="let product of dataSource">
+        <img src="{{product.img}}" class="prod-img">
+        <div class="prod-text">
+          <h4>{{product.productName}}</h4>
+          <span>Unit Price: ৳{{product.price}}</span>
+          <div class="quantity-total">
+            <div class="quantity">
+              <button><i class="fa fa-minus" aria-hidden="true"></i></button>
+              <input type="text" readonly value="{{product.quantity}}">
+              <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <p>৳{{product.total}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="card-bottom">
       <a [routerLink]="['/checkout']">
-        <p>Proceed to Checkout</p>
+        <p (click)="drawer.toggle()">Proceed to Checkout</p>
         <span>৳0</span>
       </a>
     </div>
@@ -27,6 +43,7 @@
     <div class="footer-area">
       <app-footer></app-footer>
     </div>
+    <app-scroll-button></app-scroll-button>
     <bottom-nav></bottom-nav>
     <cart-box (click)="drawer.toggle()"></cart-box>
   </mat-drawer-content>
