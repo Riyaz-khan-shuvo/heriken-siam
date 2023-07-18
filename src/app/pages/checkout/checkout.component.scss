@@ -150,10 +150,6 @@
         }
 
         .quantity-data {
-          // display: flex;
-          // align-items: center;
-          // gap: 5px;
-
           button {
             color: #555;
             width: 30px;
@@ -162,6 +158,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin: 0 5px;
 
             &:hover {
               background-color: #94a9a0;
