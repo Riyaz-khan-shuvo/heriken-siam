@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import productsList from 'src/app/data/data';
+import { MoreDetailsComponent } from './more-details/more-details.component';
+import { CustomerReviewsComponent } from './customer-reviews/customer-reviews.component';
 
 @Component({
   selector: 'app-product-details',
@@ -12,6 +14,7 @@ export class ProductDetailsComponent implements OnInit {
   product: any;
   productIdFromRoute: any;
   productId: any;
+  dynamic = MoreDetailsComponent;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -22,5 +25,13 @@ export class ProductDetailsComponent implements OnInit {
         (prod) => prod._id == this.productIdFromRoute
       );
     });
+  }
+
+  assignComponent(component) {
+    if (component === 'more-details') {
+      this.dynamic = MoreDetailsComponent;
+    } else {
+      this.dynamic = CustomerReviewsComponent;
+    }
   }
 }

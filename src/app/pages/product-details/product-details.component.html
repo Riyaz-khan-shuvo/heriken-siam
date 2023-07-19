@@ -41,9 +41,13 @@
   </div>
 
   <div class="toggler">
-    <a>DESCRIPTIONS</a>
+    <a (click)="assignComponent('more-details')">MORE DETAILS</a>
     <div class="line"></div>
-    <a>CUSTOMER REVIEW (0)</a>
+    <a (click)="assignComponent('customer-reviews')">CUSTOMER REVIEWS (0)</a>
+  </div>
+
+  <div class="dynamic-component">
+    <ng-container *ngComponentOutlet="dynamic"></ng-container>
   </div>
 
   <div class="related">
