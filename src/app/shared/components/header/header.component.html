@@ -38,6 +38,22 @@
     <ul>
       <li [routerLink]="['']">Home</li>
       <li [routerLink]="['allproducts']">Products</li>
+      <li class="categories" (click)="toggleDropdown()">
+        <h3>
+          <mat-icon>category</mat-icon>
+          <span>TOP CATEGORIES</span>
+        </h3>
+      </li>
+      <div class="main-categories" *ngIf="showMenu">
+        <a>Health & Beauty</a>
+        <a>Digital Marketing</a>
+        <a>Groceries</a>
+        <a>Kids Toys</a>
+        <a>Leather</a>
+        <a>Gadgets</a>
+        <a>Health Food</a>
+        <a class="last-item">Women's Clothing</a>
+      </div>
     </ul>
   </div>
   <!-- Responsive Search Box -->
