@@ -23,16 +23,4 @@ export class ProductDetailsComponent implements OnInit {
       );
     });
   }
-
-  //   const routeParams = this.route.snapshot.paramMap;
-  //   this.productIdFromRoute = Number(routeParams.get('productId'));
-  //   this.reload();
-  // }
-
-  // reload() {
-  //   this.product = productsList.find(
-  //     (product) => product.id === this.productIdFromRoute
-  //   );
-  //   // window.location.reload();
-  // }
 }

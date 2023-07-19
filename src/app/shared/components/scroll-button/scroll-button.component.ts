@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scroll-button.component.scss'],
 })
 export class ScrollButtonComponent implements OnInit {
-  constructor() {}
+  windowScrolled = false;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.addEventListener(
+      'scroll',
+      () => (this.windowScrolled = window.scrollY !== 0)
+    );
+  }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
