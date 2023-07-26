@@ -1,10 +1,19 @@
 <div class="top-container">
   <div class="header">
     <img class="logo" [routerLink]="['']" src="assets/icons/logo.png" />
-    <div class="search-box">
+    <!-- <div class="search-box">
       <input placeholder="Search products in Heriken..." />
       <mat-icon>search</mat-icon>
+    </div> -->
+    <div class="search-bar">
+      <input
+        type="text"
+        class="search"
+        placeholder="Search products in Heriken..."
+      />
+      <mat-icon>search</mat-icon>
     </div>
+
     <div class="action-icons">
       <div matTooltip="Wishlist">
         <mat-icon>favorite</mat-icon>
