@@ -2,9 +2,9 @@
   <div class="card-list">
     <div class="card" *ngFor="let product of products">
       <div>
-        <div [routerLink]="['/details',product?._id]">
+        <div [routerLink]="['/details', product?._id]">
           <div class="product-image">
-            <img src="{{ product.imgLink }}" alt="product-image" />
+            <img [src]="product?.images[0]" alt="product-image" />
           </div>
           <div class="content">
             <div class="icons">
@@ -13,22 +13,19 @@
               <i class="bi bi-star"></i>
               <i class="bi bi-star"></i>
               <i class="bi bi-star"></i>
-              <span> (0) </span>
+              <span>(0)</span>
             </div>
             <h3 class="title">
-              {{ product.title }}
+              {{ product.productName }}
             </h3>
             <div class="price">
-              <h3 class="old-price">৳{{ product.oldPrice }}</h3>
-              <h3 class="new-price">৳{{ product.newPrice }}</h3>
+              <!-- <h3 class="old-price">৳{{ product.oldPrice }}</h3> -->
+              <h3 class="new-price">৳{{ product.price }}</h3>
             </div>
-
-            <h2 class="discount">Discount:৳{{ product.discount }}</h2>
+            <!-- <h2 class="discount">Discount:৳{{ product.discount }}</h2> -->
           </div>
-
         </div>
-
-        <button (click)="addToCart(product._id)" class="add">
+        <button class="add" (click)="addToCart(product?._id)">
           <i class="bi bi-basket2-fill"></i>
           Add
         </button>

@@ -3,12 +3,13 @@
   padding: 0;
 }
 
-.example-container {
+.container {
   background-color: #f5f6f7;
 
   .cart-drawer {
     background-color: white;
     position: fixed;
+    width: 400px;
 
     .card-top {
       border-bottom: 1px solid #e8e8e8;
@@ -56,6 +57,8 @@
     .card-main {
       height: 100%;
       max-height: calc(100vh - 165px);
+      position: relative;
+      overflow-y: scroll;
 
       .cart-items {
         padding: 15px;
@@ -138,6 +141,11 @@
     .card-bottom {
       padding: 15px 20px;
       box-shadow: 0 -3px 7px #00000014;
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      right: 0;
+      left: 0;
 
       a {
         display: flex;

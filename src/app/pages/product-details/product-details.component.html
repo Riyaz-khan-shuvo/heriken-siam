@@ -3,7 +3,7 @@
     <div class="images">
       <div class="prod-img">
         <div class="img-container">
-          <img [src]=" product?.imgLink " />
+          <img [src]="product?.images" />
         </div>
       </div>
       <!-- <div class="other-img">
@@ -14,17 +14,17 @@
       </div> -->
     </div>
     <div class="main-info">
-      <p class="title">{{ product?.title }}</p>
+      <p class="title">{{ product?.productName }}</p>
       <div class="brand-code">
-        <p>Product ID: {{ product?.id }}</p>
-        <p>BRAND: Remax</p>
+        <!-- <p>Product ID: {{ product?.id }}</p> -->
+        <!-- <p>BRAND: Remax</p> -->
       </div>
       <div class="price">
         <div>
-          <p class="previous">৳{{ product?.oldPrice }}</p>
-          <p class="current">৳{{ product?.newPrice }}</p>
+          <!-- <p class="previous">৳{{ product?.oldPrice }}</p> -->
+          <p class="current">৳{{ product?.price }}</p>
         </div>
-        <div class="discount">Discount: ৳{{ product?.discount }}</div>
+        <!-- <div class="discount">Discount: ৳{{ product?.discount }}</div> -->
       </div>
       <div class="action-buttons">
         <div class="add-buy">
@@ -46,9 +46,7 @@
     <a (click)="assignComponent('customer-reviews')">CUSTOMER REVIEWS (0)</a>
   </div>
 
-  <div class="dynamic-component">
-    <ng-container *ngComponentOutlet="dynamic"></ng-container>
-  </div>
+  <ng-container *ngComponentOutlet="detailsAndRatingSection"></ng-container>
 
   <div class="related">
     <p class="heading">Related items</p>

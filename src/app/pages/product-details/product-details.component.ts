@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import productsList from 'src/app/data/data';
 import { MoreDetailsComponent } from './more-details/more-details.component';
 import { CustomerReviewsComponent } from './customer-reviews/customer-reviews.component';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-details',
@@ -10,28 +10,47 @@ import { CustomerReviewsComponent } from './customer-reviews/customer-reviews.co
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  products = productsList;
   product: any;
   productIdFromRoute: any;
-  productId: any;
-  dynamic = MoreDetailsComponent;
+  detailsAndRatingSection = MoreDetailsComponent;
+  productData: any;
+  cartData: any;
+  cartProducts: Array<any> = [];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.productIdFromRoute = params['productId'];
-      this.product = this.products.find(
-        (prod) => prod._id == this.productIdFromRoute
-      );
     });
+    this.getProductById();
   }
+
+  getProductById() {
+    this.productService
+      .getProductById(this.productIdFromRoute)
+      .subscribe((product) => {
+        this.productData = product;
+        this.product = this.productData.data;
+      });
+  }
+
+  // addToCart(productId) {
+  //   this.cartData = this.products.find((m) => m?._id == productId);
+  //   this.cartProducts.push(this.cartData);
+  //   let unique = [...new Set(this.cartProducts)];
+  //   const products = JSON.stringify(unique);
+  //   localStorage.setItem('cartProducts', products);
+  // }
 
   assignComponent(component) {
     if (component === 'more-details') {
-      this.dynamic = MoreDetailsComponent;
+      this.detailsAndRatingSection = MoreDetailsComponent;
     } else {
-      this.dynamic = CustomerReviewsComponent;
+      this.detailsAndRatingSection = CustomerReviewsComponent;
     }
   }
 }

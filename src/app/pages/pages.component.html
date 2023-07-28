@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
+<mat-drawer-container class="container" [hasBackdrop]="true">
   <mat-drawer class="cart-drawer" position="end" #drawer>
     <div class="card-top">
       <div class="close-drawer">
@@ -10,8 +10,8 @@
       </div>
     </div>
     <div class="card-main">
-      <div class="cart-items" *ngFor="let product of dataSource">
-        <img src="{{product.img}}" class="prod-img">
+      <div class="cart-items" *ngFor="let product of cartResult">
+        <img [src]="product.images" class="prod-img">
         <div class="prod-text">
           <h4>{{product.productName}}</h4>
           <span>Unit Price: ৳{{product.price}}</span>

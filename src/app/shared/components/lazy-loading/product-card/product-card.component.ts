@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import productsList from 'src/app/data/data';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-card',
@@ -7,20 +7,28 @@ import productsList from 'src/app/data/data';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  products = productsList;
+  productData: any;
+  products: any;
+  cartData: any;
   cartProducts: Array<any> = [];
-  data: any;
 
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-
+    this.getAllProducts();
   }
-  addToCart(productId: any): any {
-    this.data = this.products.find(m => m?._id == productId)
-    this.cartProducts.push(this.data)
+
+  getAllProducts() {
+    this.productService.getAllProducts().subscribe((results) => {
+      (this.productData = results), (this.products = this.productData.data);
+    });
+  }
+
+  addToCart(productId) {
+    this.cartData = this.products.find((m) => m?._id == productId);
+    this.cartProducts.push(this.cartData);
     let unique = [...new Set(this.cartProducts)];
-    const products = JSON.stringify(unique)
-    localStorage.setItem("productsCart", products)
+    const products = JSON.stringify(unique);
+    localStorage.setItem('cartProducts', products);
   }
 }
