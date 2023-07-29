@@ -7,6 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -19,6 +20,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatInputModule,
     MatFormFieldModule,
     MatRadioModule,
+    MatSnackBarModule,
   ],
   exports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatInputModule,
     MatFormFieldModule,
     MatRadioModule,
+    MatSnackBarModule,
   ],
 })
 export class MaterialModule {}

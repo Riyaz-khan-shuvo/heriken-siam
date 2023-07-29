@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class ProductCardComponent implements OnInit {
   cartData: any;
   cartProducts: Array<any> = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -24,11 +28,15 @@ export class ProductCardComponent implements OnInit {
     });
   }
 
-  addToCart(productId) {
+  addToCart(productId, message: string) {
     this.cartData = this.products.find((m) => m?._id == productId);
     this.cartProducts.push(this.cartData);
     let unique = [...new Set(this.cartProducts)];
     const products = JSON.stringify(unique);
     localStorage.setItem('cartProducts', products);
+    this.snackBar.open(message, '', {
+      duration: 1500,
+      panelClass: ['snackbar'],
+    });
   }
 }

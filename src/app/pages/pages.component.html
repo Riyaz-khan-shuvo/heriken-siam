@@ -10,8 +10,8 @@
       </div>
     </div>
     <div class="card-main">
-      <div class="cart-items" *ngFor="let product of cartResult">
-        <img [src]="product.images" class="prod-img">
+      <div class="cart-items" *ngFor="let product of cartProducts">
+        <img [src]="product.images">
         <div class="prod-text">
           <h4>{{product.productName}}</h4>
           <span>Unit Price: ৳{{product.price}}</span>

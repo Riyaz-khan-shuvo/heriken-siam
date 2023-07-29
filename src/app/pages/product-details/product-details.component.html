@@ -28,7 +28,7 @@
       </div>
       <div class="action-buttons">
         <div class="add-buy">
-          <button class="add">
+          <button class="add" (click)="addToCart('Added to Cart Successfully!')">
             <mat-icon>shopping_basket</mat-icon>ADD TO CART
           </button>
           <button>Buy Now</button>
@@ -41,9 +41,9 @@
   </div>
 
   <div class="toggler">
-    <a (click)="assignComponent('more-details')">MORE DETAILS</a>
+    <a (click)="assignDetailsOrReviews('more-details')">MORE DETAILS</a>
     <div class="line"></div>
-    <a (click)="assignComponent('customer-reviews')">CUSTOMER REVIEWS (0)</a>
+    <a (click)="assignDetailsOrReviews('customer-reviews')">CUSTOMER REVIEWS (0)</a>
   </div>
 
   <ng-container *ngComponentOutlet="detailsAndRatingSection"></ng-container>

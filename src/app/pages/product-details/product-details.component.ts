@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MoreDetailsComponent } from './more-details/more-details.component';
 import { CustomerReviewsComponent } from './customer-reviews/customer-reviews.component';
 import { ProductService } from 'src/app/services/product.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-details',
@@ -10,16 +11,17 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  product: any;
   productIdFromRoute: any;
   detailsAndRatingSection = MoreDetailsComponent;
+  product: any;
   productData: any;
-  cartData: any;
   cartProducts: Array<any> = [];
+  cartData: any;
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -38,15 +40,19 @@ export class ProductDetailsComponent implements OnInit {
       });
   }
 
-  // addToCart(productId) {
-  //   this.cartData = this.products.find((m) => m?._id == productId);
-  //   this.cartProducts.push(this.cartData);
-  //   let unique = [...new Set(this.cartProducts)];
-  //   const products = JSON.stringify(unique);
-  //   localStorage.setItem('cartProducts', products);
-  // }
+  addToCart(message) {
+    this.cartData = this.product;
+    this.cartProducts.push(this.cartData);
+    let unique = [...new Set(this.cartProducts)];
+    const product = JSON.stringify(unique);
+    localStorage.setItem('cartProducts', product);
+    this.snackBar.open(message, '', {
+      duration: 1500,
+      panelClass: ['snackbar'],
+    });
+  }
 
-  assignComponent(component) {
+  assignDetailsOrReviews(component) {
     if (component === 'more-details') {
       this.detailsAndRatingSection = MoreDetailsComponent;
     } else {

@@ -229,6 +229,17 @@
           mat-form-field {
             width: 100%;
 
+            input {
+              color: #555;
+              font-weight: 500;
+            }
+
+            div {
+              mat-error {
+                font-size: 10px;
+              }
+            }
+
             textarea {
               height: 75px;
             }
@@ -377,6 +388,7 @@
             border: 1px solid transparent;
             border-radius: 6px;
             font-weight: 600;
+            cursor: pointer;
           }
         }
       }
