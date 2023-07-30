@@ -16,7 +16,7 @@
               <span>(0)</span>
             </div>
             <h3 class="title">
-              {{ product.productName}}
+              {{ product.productName | truncate : 50 }}
             </h3>
             <div class="price">
               <!-- <h3 class="old-price">৳{{ product.oldPrice }}</h3> -->
@@ -25,7 +25,10 @@
             <!-- <h2 class="discount">Discount:৳{{ product.discount }}</h2> -->
           </div>
         </div>
-        <button class="add" (click)="addToCart(product?._id, 'Added to Cart Successfully!')">
+        <button
+          class="add"
+          (click)="addToCart(product?._id, 'Added to Cart Successfully!')"
+        >
           <i class="bi bi-basket2-fill"></i>
           Add
         </button>

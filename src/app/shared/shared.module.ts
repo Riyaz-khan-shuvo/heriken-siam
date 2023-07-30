@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ScrollButtonComponent } from './components/scroll-button/scroll-button.component';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
+import { TruncatePipe } from './pipes/truncate.pipe';
+import { NumbersOnlyDirective } from './custom directives/numbers-only.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     PageNotFoundComponent,
     ScrollButtonComponent,
+    TruncatePipe,
+    NumbersOnlyDirective,
   ],
   imports: [CommonModule, RouterModule, MaterialModule],
   exports: [
@@ -29,6 +33,8 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     PageNotFoundComponent,
     ScrollButtonComponent,
+    TruncatePipe,
+    NumbersOnlyDirective,
   ],
 })
 export class SharedModule {}

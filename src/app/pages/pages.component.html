@@ -11,17 +11,17 @@
     </div>
     <div class="card-main">
       <div class="cart-items" *ngFor="let product of cartProducts">
-        <img [src]="product.images">
+        <img [src]="product.images" />
         <div class="prod-text">
-          <h4>{{product.productName}}</h4>
-          <span>Unit Price: ৳{{product.price}}</span>
+          <h4>{{ product.productName | truncate : 25 }}</h4>
+          <span>Unit Price: ৳{{ product.price }}</span>
           <div class="quantity-total">
             <div class="quantity">
               <button><i class="fa fa-minus" aria-hidden="true"></i></button>
-              <input type="text" readonly value="{{product.quantity}}">
+              <input type="text" readonly value="{{ product.quantity }}" />
               <button><i class="fa fa-plus" aria-hidden="true"></i></button>
             </div>
-            <p>৳{{product.total}}</p>
+            <p>৳{{ product.total }}</p>
           </div>
         </div>
       </div>
