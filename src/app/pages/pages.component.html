@@ -14,7 +14,7 @@
         <img [src]="product.images" />
         <div class="prod-text">
           <h4>{{ product.productName | truncate : 25 }}</h4>
-          <span [(ngModel)]="productPrice" name="productPrice" ngDefaultControl>Unit Price: ৳{{ product.price }}</span>
+          <span>Unit Price: ৳{{ product.price }}</span>
           <div class="quantity-total">
             <div class="quantity">
               <button (click)="decreaseQuantity()" [disabled]="productQuantity <= 1"><i class="fa fa-minus"
@@ -22,7 +22,7 @@
               <input type="text" readonly value="{{ productQuantity }}" />
               <button (click)="increaseQuantity()"><i class="fa fa-plus" aria-hidden="true"></i></button>
             </div>
-            <p [(ngModel)]="totalPrice" name="totalPrice" ngDefaultControl>৳{{ totalPrice }}</p>
+            <p>৳</p>
           </div>
         </div>
       </div>

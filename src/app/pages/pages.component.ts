@@ -9,14 +9,11 @@ import { Route } from '@angular/router';
 export class PagesComponent implements OnInit {
   cartProducts: any;
   productQuantity: number = 1;
-  productPrice: number;
-  totalPrice: number;
 
   constructor() {}
 
   ngOnInit(): void {
     this.getCartProducts();
-    this.getTotalPrice();
   }
 
   getCartProducts() {
@@ -31,13 +28,5 @@ export class PagesComponent implements OnInit {
   decreaseQuantity() {
     this.productQuantity = this.productQuantity - 1;
     return this.productQuantity;
-  }
-
-  getTotalPrice() {
-    this.totalPrice = this.productPrice * this.productQuantity;
-    console.log(this.productPrice);
-    console.log(this.productQuantity);
-    console.log(this.totalPrice);
-    return this.totalPrice;
   }
 }

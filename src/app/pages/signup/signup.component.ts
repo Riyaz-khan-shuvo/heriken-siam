@@ -7,7 +7,7 @@ import { FormControl, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
-  signupForm = this.fb.group({
+  userSignupForm = this.fb.group({
     fullName: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
