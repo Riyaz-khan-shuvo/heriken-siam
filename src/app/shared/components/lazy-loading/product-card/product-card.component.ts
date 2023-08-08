@@ -11,7 +11,6 @@ export class ProductCardComponent implements OnInit {
   productData: any;
   products: any;
   cartData: any;
-
   cartProducts: Array<any> = [];
 
   constructor(
@@ -45,10 +44,9 @@ export class ProductCardComponent implements OnInit {
   //   localStorage.setItem('cartProducts', JSON.stringify(shoppingCart));
   // }
 
-  showCartProducts() {
-    const products = localStorage.getItem('cartProducts');
-    console.log(products);
-  }
+  // showCartProducts() {
+  //   const products = localStorage.getItem('cartProducts');
+  // }
 
   addToCart(productId, message: string) {
     this.cartData = this.products.find((m) => m?._id == productId);
