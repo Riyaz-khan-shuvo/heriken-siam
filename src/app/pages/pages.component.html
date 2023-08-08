@@ -17,10 +17,16 @@
           <span>Unit Price: ৳{{ product.price }}</span>
           <div class="quantity-total">
             <div class="quantity">
-              <button (click)="decreaseQuantity()" [disabled]="productQuantity <= 1"><i class="fa fa-minus"
-                  aria-hidden="true"></i></button>
+              <button
+                (click)="decreaseQuantity()"
+                [disabled]="productQuantity <= 1"
+              >
+                <i class="fa fa-minus" aria-hidden="true"></i>
+              </button>
               <input type="text" readonly value="{{ productQuantity }}" />
-              <button (click)="increaseQuantity()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+              <button (click)="increaseQuantity()">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </button>
             </div>
             <p>৳</p>
           </div>
@@ -28,7 +34,7 @@
       </div>
     </div>
     <div class="card-bottom">
-      <a [routerLink]="['/checkout']" (click)="drawer.toggle()">
+      <a [routerLink]="['/pages/checkout']" (click)="drawer.toggle()">
         <p>Proceed to Checkout</p>
         <span>৳0</span>
       </a>
