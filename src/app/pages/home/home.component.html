@@ -17,13 +17,17 @@
     </div>
   </div>
 
-  <div class="products">
-    <app-subicon></app-subicon>
+  <div class="sub-icons">
+    <div class="icon-container" *ngFor="let item of list">
+      <div class="icon">
+        <i class="bi {{ item.icon }}"></i>
+      </div>
+      <div class="text-container">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.subTitle }}</p>
+      </div>
+    </div>
   </div>
 
   <app-product-card></app-product-card>
-
-  <div class="more-button">
-    <button><mat-icon>remove_red_eye</mat-icon>VIEW ALL DEALS</button>
-  </div>
 </div>

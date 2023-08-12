@@ -4,7 +4,7 @@ import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component
 import { CartBoxComponent } from './components/cart-box/cart-box.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ProductCardComponent } from './components/lazy-loading/product-card/product-card.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ScrollButtonComponent } from './components/scroll-button/scroll-button.component';
 import { MaterialModule } from './material.module';

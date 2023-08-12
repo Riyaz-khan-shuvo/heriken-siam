@@ -21,9 +21,9 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'signup',
+        path: 'auth',
         loadChildren: () =>
-          import('./signup/signup.module').then((m) => m.SignupModule),
+          import('./auth/auth.module').then((m) => m.AuthModule),
       },
       {
         path: 'allproducts',
