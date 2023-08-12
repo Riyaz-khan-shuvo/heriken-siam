@@ -8,7 +8,9 @@ import { Route } from '@angular/router';
 })
 export class PagesComponent implements OnInit {
   cartProducts: any;
-  productQuantity: number = 1;
+  product: any;
+  quantity: number = 1;
+  totalPrice: number;
 
   constructor() {}
 
@@ -20,13 +22,15 @@ export class PagesComponent implements OnInit {
     this.cartProducts = JSON.parse(localStorage.getItem('cartProducts'));
   }
 
-  increaseQuantity() {
-    this.productQuantity = this.productQuantity + 1;
-    return this.productQuantity;
+  increaseQuantity(productId) {
+    this.product = this.cartProducts.find((m) => m?._id == productId);
+    this.product.quantity = this.product.quantity + 1;
+    return this.product.quantity;
   }
 
-  decreaseQuantity() {
-    this.productQuantity = this.productQuantity - 1;
-    return this.productQuantity;
+  decreaseQuantity(productId) {
+    this.product = this.cartProducts.find((m) => m?._id == productId);
+    this.product.quantity = this.product.quantity - 1;
+    return this.product.quantity;
   }
 }

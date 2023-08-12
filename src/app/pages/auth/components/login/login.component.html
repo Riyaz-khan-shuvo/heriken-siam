@@ -1,7 +1,7 @@
 <div class="container">
     <div class="form-area">
         <div class="form-top">
-            <h3>Welcome!</h3>
+            <h3>Welcome Back!</h3>
             <p>Enter your username and password to login</p>
         </div>
         <form [formGroup]="userLoginForm" (ngSubmit)="loginUser()">
@@ -37,6 +37,13 @@
                 </div>
                 <div class="form-sub-btn">
                     <button [disabled]="userLoginForm.invalid">Login</button>
+                </div>
+                <div class="bottom-text">
+                    <div class="register-text">
+                        Dont have an account? <span class="register-router" [routerLink]="['/auth/register']">Register
+                            now!</span>
+                    </div>
+                    <span class="forgot-router">Forgot Password?</span>
                 </div>
             </div>
         </form>

@@ -1,20 +1,24 @@
 .container {
   display: grid;
-  padding: 50px 80px;
+  padding-top: 50px;
+  max-width: 1200px;
+  margin: auto;
   background-color: #f5f6f7;
   gap: 40px;
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: 991px) {
-    padding: 125px 50px 50px 50px;
+  @media only screen and (max-width: 1182px) {
+    max-width: 960px;
   }
 
-  @media only screen and (max-width: 768px) {
-    padding: 125px 30px 50px 30px;
+  @media only screen and (max-width: 991px) {
+    max-width: 720px;
+    padding: 125px 0 50px 0;
   }
 
   @media only screen and (max-width: 550px) {
+    max-width: 540px;
     padding: 125px 10px 50px 10px;
   }
 

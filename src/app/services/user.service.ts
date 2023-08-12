@@ -12,6 +12,10 @@ export class UserService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
+  register(data: any) {
+    return this.http.post(this.apiUrl + 'registration', data);
+  }
+
   login(data: any) {
     return this.http.put(this.apiUrl + 'login', data);
   }

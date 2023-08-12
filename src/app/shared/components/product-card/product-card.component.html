@@ -19,11 +19,11 @@
             </div>
             <p class="product-title">{{ product.productName | truncate : 50 }}</p>
             <div class="product-price">
-              <span class="old-price">৳{{ product.price + product.discountAmount }}</span>
-              <span class="new-price">৳{{ product.price }}</span>
+              <span class="old-price">৳{{ product.price + product.discountAmount | number }}</span>
+              <span class="new-price">৳{{ product.price | number }}</span>
             </div>
             <div class="discount">
-              <h3>Discount:<span>৳{{ product.discountAmount }}</span></h3>
+              <h3>Discount:<span>৳{{ product.discountAmount | number }}</span></h3>
             </div>
           </div>
         </div>
@@ -32,8 +32,5 @@
           Add
         </button>
       </div>
-    </div>
-    <div class="more-button">
-      <button><mat-icon>remove_red_eye</mat-icon>VIEW ALL DEALS</button>
     </div>
   </div>

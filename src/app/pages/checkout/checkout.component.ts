@@ -8,6 +8,8 @@ import { FormControl, FormBuilder, Validators } from '@angular/forms';
 })
 export class CheckoutComponent implements OnInit {
   cartProducts: any;
+  product: any;
+  quantity: number = 1;
 
   constructor(private fb: FormBuilder) {}
 
@@ -46,5 +48,17 @@ export class CheckoutComponent implements OnInit {
     products = products.filter((product) => product._id !== productId);
     localStorage.setItem('cartProducts', JSON.stringify(products));
     this.getCartProducts();
+  }
+
+  increaseQuantity(productId) {
+    this.product = this.cartProducts.find((m) => m?._id == productId);
+    this.product.quantity = this.product.quantity + 1;
+    return this.product.quantity;
+  }
+
+  decreaseQuantity(productId) {
+    this.product = this.cartProducts.find((m) => m?._id == productId);
+    this.product.quantity = this.product.quantity - 1;
+    return this.product.quantity;
   }
 }

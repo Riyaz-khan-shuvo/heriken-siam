@@ -28,32 +28,9 @@ export class ProductCardComponent implements OnInit {
     });
   }
 
-  // addToDB(id) {
-  //   let shoppingCart = {};
-  //   let storedCart = localStorage.getItem('cartProducts');
-  //   if (storedCart) {
-  //     shoppingCart = JSON.parse(storedCart);
-  //   }
-  //   const quantity = shoppingCart[id];
-  //   if (quantity) {
-  //     const newQuantity = quantity + 1;
-  //     shoppingCart[id] = newQuantity;
-  //   } else {
-  //     shoppingCart[id] = 1;
-  //   }
-  //   localStorage.setItem('cartProducts', JSON.stringify(shoppingCart));
-  // }
-
-  // showCartProducts() {
-  //   const products = localStorage.getItem('cartProducts');
-  // }
-
   addToCart(productId, message: string) {
     this.cartData = this.products.find((m) => m?._id == productId);
     this.cartProducts.push(this.cartData);
-    // this.addToDB(this.cartData._id);
-    // this.showCartProducts();
-    // console.log(this.cartProducts);
     let unique = [...new Set(this.cartProducts)];
     const products = JSON.stringify(unique);
     localStorage.setItem('cartProducts', products);
