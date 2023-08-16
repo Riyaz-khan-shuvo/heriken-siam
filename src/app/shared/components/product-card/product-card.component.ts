@@ -12,6 +12,7 @@ export class ProductCardComponent implements OnInit {
   products: any;
   cartData: any;
   cartProducts: Array<any> = [];
+  currentProducts: any;
 
   constructor(
     private productService: ProductService,
@@ -29,9 +30,13 @@ export class ProductCardComponent implements OnInit {
   }
 
   addToCart(productId, message: string) {
+    this.currentProducts = JSON.parse(localStorage.getItem('cartProducts'));
+    if (this.currentProducts == null) {
+      this.currentProducts = [];
+    }
     this.cartData = this.products.find((m) => m?._id == productId);
-    this.cartProducts.push(this.cartData);
-    let unique = [...new Set(this.cartProducts)];
+    this.currentProducts.push(this.cartData);
+    let unique = [...new Set(this.currentProducts)];
     const products = JSON.stringify(unique);
     localStorage.setItem('cartProducts', products);
     this.snackBar.open(message, '', {

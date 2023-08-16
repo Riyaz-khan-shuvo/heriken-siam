@@ -33,10 +33,7 @@
                     userRegisterForm.controls['password']?.hasError('required')
                   ">Password is required</mat-error>
                             <mat-error *ngIf="userRegisterForm.controls['password']?.hasError('minlength')">
-                                Please enter a strong password between 5 and 11 characters
-                            </mat-error>
-                            <mat-error *ngIf="userRegisterForm.controls['password']?.hasError('maxlength')">
-                                Please enter a strong password between 5 and 11 characters
+                                Please enter a password of atleast 5 characters
                             </mat-error>
                         </div>
                     </div>
@@ -50,9 +47,6 @@
                             <mat-error *ngIf="
                     userRegisterForm.controls['fullName']?.hasError('required')
                   ">Full Name is required</mat-error>
-                            <mat-error *ngIf="
-                    userRegisterForm.controls['fullName']?.hasError('minlength')
-                  ">Please enter a full name atleast 3 characters long</mat-error>
                         </div>
                     </div>
                     <div class="form-input-main">

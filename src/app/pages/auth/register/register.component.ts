@@ -13,15 +13,11 @@ export class RegisterComponent implements OnInit {
   errorResponse!: string;
 
   userRegisterForm = this.fb.group({
-    fullName: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-    ]),
+    fullName: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
-      Validators.maxLength(11),
     ]),
     address: new FormControl('', [Validators.required]),
     phoneNo: new FormControl('', [

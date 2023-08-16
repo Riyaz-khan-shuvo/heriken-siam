@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +23,15 @@ export class UserService {
 
   isLoggedIn() {
     return localStorage.getItem('token') != null;
+  }
+
+  forgotPassword(payload: any) {
+    return this.http.patch(this.apiUrl + 'forgot-password', payload).pipe(
+      tap((res: any) => {
+        localStorage.removeItem('token');
+        this.router.navigateByUrl('/auth/login');
+      })
+    );
   }
 
   logout() {
