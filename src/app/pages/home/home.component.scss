@@ -180,16 +180,16 @@
         width: 3rem;
         border-radius: 50%;
         background-color: #fff;
-        border: double 3px #94a9a0;
+        border: double 3px #70c332;
 
         .bi {
           font-size: 18px;
-          color: #94a9a0;
+          color: #70c332;
           transition: all 0.3s linear;
         }
 
         &:hover {
-          background-color: #94a9a0;
+          background-color: #70c332;
           box-shadow: 5px 15px 35px #0000001a;
 
           .bi {
@@ -228,7 +228,7 @@
     }
 
     button {
-      background-color: #94a9a0;
+      background-color: #70c332;
       border: 2px solid transparent;
       color: white;
       border-radius: 8px;
@@ -244,8 +244,8 @@
 
       &:hover {
         background-color: #fff;
-        color: #94a9a0;
-        border: 2px solid #94a9a0;
+        color: #70c332;
+        border: 2px solid #70c332;
       }
     }
   }

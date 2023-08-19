@@ -1,6 +1,6 @@
 <div class="top-container">
   <div class="header">
-    <img class="logo" [routerLink]="['']" src="assets/icons/logo.png" />
+    <img class="logo" [routerLink]="['/']" src="assets/icons/logo.png" />
     <div class="search-bar">
       <input type="text" class="search" placeholder="Search products in Heriken..." />
       <mat-icon>search</mat-icon>
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="!isLoggedIn()" class="account-section" [routerLink]="['/auth']" matTooltip="Login/Register">
+    <div *ngIf="!isLoggedIn()" class="account-section" [routerLink]="['/pages/auth']" matTooltip="Login/Register">
       <div class="account-icon">
         <mat-icon>account_circle</mat-icon>
       </div>
@@ -44,7 +44,7 @@
     <div class="account">
       <mat-icon>account_circle</mat-icon>
     </div>
-    <img class="logo" [routerLink]="['']" src="assets/icons/logo.png" />
+    <img class="logo" [routerLink]="['/']" src="assets/icons/logo.png" />
     <div class="res-search" *ngIf="!showSearchBox" (click)="toggleSearchBox()">
       <mat-icon>search</mat-icon>
     </div>
@@ -55,8 +55,8 @@
   <!-- Navbar Starts -->
   <div class="navbar">
     <ul>
-      <li [routerLink]="['']">Home</li>
-      <li [routerLink]="['/allproducts']">Products</li>
+      <li [routerLink]="['/']">Home</li>
+      <li [routerLink]="['/pages/allproducts']">Products</li>
       <li class="categories" (click)="toggleCategoryDropdown()">
         <h3>
           <mat-icon>category</mat-icon>

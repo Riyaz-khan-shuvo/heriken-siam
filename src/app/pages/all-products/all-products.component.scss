@@ -69,7 +69,7 @@ $aligen: center;
           transition: all 0.3s linear;
 
           &:hover {
-            background: #94a9a0;
+            background: #70c332;
             color: #fff;
           }
         }
@@ -148,7 +148,7 @@ $aligen: center;
         }
 
         &:hover {
-          border: 1px solid #94a9a0;
+          border: 1px solid #70c332;
           box-shadow: 0 15px 35px #0000001a;
         }
 
@@ -193,13 +193,13 @@ $aligen: center;
             }
 
             .new-price {
-              color: #94a9a0;
+              color: #70c332;
             }
           }
         }
 
         .discount {
-          color: #94a9a0;
+          color: #70c332;
           font-size: 24px;
           font-weight: 500;
         }
@@ -225,7 +225,7 @@ $aligen: center;
           }
 
           &:hover {
-            background-color: #94a9a0;
+            background-color: #70c332;
             color: #fff;
           }
         }
@@ -239,7 +239,7 @@ $aligen: center;
       align-items: center;
 
       button {
-        background-color: #94a9a0;
+        background-color: #70c332;
         border: 2px solid transparent;
         color: white;
         border-radius: 8px;
@@ -255,8 +255,8 @@ $aligen: center;
 
         &:hover {
           background-color: #fff;
-          color: #94a9a0;
-          border: 2px solid #94a9a0;
+          color: #70c332;
+          border: 2px solid #70c332;
         }
       }
     }

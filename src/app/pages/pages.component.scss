@@ -44,7 +44,7 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-        color: #94a9a0;
+        color: #70c332;
         font-weight: 500;
         font-size: 17px;
 
@@ -108,14 +108,14 @@
                 cursor: pointer;
 
                 &:hover {
-                  background-color: #94a9a0;
+                  background-color: #70c332;
                   color: white;
                   transition: all 0.3s linear;
                 }
               }
 
               input {
-                color: #94a9a0;
+                color: #70c332;
                 font-weight: 500;
                 font-size: 14px;
                 width: 40px;
@@ -129,7 +129,7 @@
             }
 
             p {
-              color: #94a9a0;
+              color: #70c332;
               font-weight: 500;
               font-size: 17px;
               margin-bottom: 0px;
@@ -150,7 +150,7 @@
 
       a {
         display: flex;
-        background-color: #94a9a0;
+        background-color: #70c332;
         padding: 15px 0;
         border-radius: 8px;
         align-items: center;

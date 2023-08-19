@@ -11,12 +11,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  productIdFromRoute: any;
   detailsAndRatingSection = MoreDetailsComponent;
   product: any;
+  products: any;
   productData: any;
   cartProducts: Array<any> = [];
   cartData: any;
+  currentProducts: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,27 +26,28 @@ export class ProductDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.productIdFromRoute = params['productId'];
+    this.route.params.subscribe((param) => {
+      this.getProductById(param['productId']);
     });
-    this.getProductById();
   }
 
-  getProductById() {
-    this.productService
-      .getProductById(this.productIdFromRoute)
-      .subscribe((product) => {
-        this.productData = product;
-        this.product = this.productData.data;
-      });
+  getProductById(id: any) {
+    this.productService.getProductById(id).subscribe((product) => {
+      this.productData = product;
+      this.product = this.productData.data;
+    });
   }
 
-  addToCart(message) {
-    this.cartData = this.product;
-    this.cartProducts.push(this.cartData);
-    let unique = [...new Set(this.cartProducts)];
-    const product = JSON.stringify(unique);
-    localStorage.setItem('cartProducts', product);
+  addToCart(productId, message: string) {
+    this.currentProducts = JSON.parse(localStorage.getItem('cartProducts'));
+    if (this.currentProducts == null) {
+      this.currentProducts = [];
+    }
+    this.cartData = this.products.find((m) => m?._id == productId);
+    this.currentProducts.push(this.cartData);
+    let unique = [...new Set(this.currentProducts)];
+    const products = JSON.stringify(unique);
+    localStorage.setItem('cartProducts', products);
     this.snackBar.open(message, '', {
       duration: 1500,
       panelClass: ['snackbar'],
