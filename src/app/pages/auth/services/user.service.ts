@@ -29,7 +29,7 @@ export class UserService {
     return this.http.patch(this.apiUrl + 'forgot-password', payload).pipe(
       tap((res: any) => {
         localStorage.removeItem('token');
-        this.router.navigateByUrl('/auth/login');
+        this.router.navigateByUrl('/pages/auth/login');
       })
     );
   }
@@ -39,7 +39,7 @@ export class UserService {
     setTimeout(() => {
       clearInterval(this.refreshTokenInterval);
       this.refreshTokenInterval = null;
-      this.router.navigate(['/auth/login']);
+      this.router.navigate(['/pages/auth/login']);
     }, 1000);
   }
 }

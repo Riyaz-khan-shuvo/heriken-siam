@@ -7,13 +7,13 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { UserService } from 'src/app/services/user.service';
+import { AdminService } from '../services/admin.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(public userService: UserService, public router: Router) {}
+  constructor(public adminService: AdminService, public router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -24,8 +24,8 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     const currentUrl = state.url;
-    const isLoggedIn = this.userService.isLoggedIn();
-    const AUTH_URLS = ['/pages/auth/login', '/pages/auth/register'];
+    const isLoggedIn = this.adminService.isLoggedIn();
+    const AUTH_URLS = ['/admin/auth/login'];
 
     if (AUTH_URLS.includes(currentUrl) && isLoggedIn) {
       this.router.navigateByUrl('/');

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
-import { AdminService } from 'src/app/services/admin.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -11,24 +11,24 @@ export class ForgotPasswordComponent implements OnInit {
   responseData: any;
   errorResponse!: string;
 
-  adminForgotPasswordForm = this.fb.group({
-    username: new FormControl('', [Validators.required]),
+  userForgotPasswordForm = this.fb.group({
+    email: new FormControl('', [Validators.required]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
     ]),
   });
 
-  constructor(private fb: FormBuilder, private adminService: AdminService) {}
+  constructor(private fb: FormBuilder, private userService: UserService) {}
 
   ngOnInit(): void {}
 
-  forgotPasswordAdmin() {
-    const username = this.adminForgotPasswordForm.controls['username'].value;
-    const newPassword = this.adminForgotPasswordForm.controls['password'].value;
-    this.adminService.forgotPassword({ username, newPassword }).subscribe({
+  forgotPasswordUser() {
+    const email = this.userForgotPasswordForm.controls['email'].value;
+    const newPassword = this.userForgotPasswordForm.controls['password'].value;
+    this.userService.forgotPassword({ email, newPassword }).subscribe({
       next: () => {
-        this.adminForgotPasswordForm.reset();
+        this.userForgotPasswordForm.reset();
       },
       error: (err) => {
         this.errorResponse = err.error.message;

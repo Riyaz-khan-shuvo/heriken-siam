@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
     this.userService.register(this.userRegisterForm.value).subscribe({
       next: () => {
         this.userRegisterForm.reset();
-        this.router.navigate(['auth']);
+        this.router.navigate(['/pages/auth']);
       },
       error: (err) => {
         this.errorResponse = err.error.message;

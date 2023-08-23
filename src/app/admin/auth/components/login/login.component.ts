@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'app-login',
@@ -12,20 +12,20 @@ export class LoginComponent {
   responseData: any;
   errorResponse!: string;
 
-  userLoginForm = this.fb.group({
-    email: new FormControl('', [Validators.required]),
+  adminLoginForm = this.fb.group({
+    username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,
+    private adminService: AdminService,
     private router: Router
   ) {}
 
-  loginUser() {
-    if (this.userLoginForm.valid) {
-      this.userService.login(this.userLoginForm.value).subscribe(
+  loginAdmin() {
+    if (this.adminLoginForm.valid) {
+      this.adminService.login(this.adminLoginForm.value).subscribe(
         (result) => {
           if (result != null) {
             this.responseData = result;

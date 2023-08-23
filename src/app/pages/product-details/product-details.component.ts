@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MoreDetailsComponent } from './more-details/more-details.component';
 import { CustomerReviewsComponent } from './customer-reviews/customer-reviews.component';
-import { ProductService } from 'src/app/services/product.service';
+import { ProductService } from 'src/app/shared/services/product.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
